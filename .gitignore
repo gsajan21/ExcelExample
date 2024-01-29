@@ -21,5 +21,6 @@ rad.json
 #Test results file
 TestResults.xml
 
-target/*
+target
 .gitattributes
+.DS_Store
