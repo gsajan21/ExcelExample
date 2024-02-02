@@ -2,19 +2,19 @@ package com.sajan.model;
 
 public class Employee {
 
-    private int empId;
+    private Integer empId;
     private String empName;
     private String address;
     private Integer salary;
 
-    public Employee(int empId, String empName, String address, Integer salary) {
+    public Employee(Integer empId, String empName, String address, Integer salary) {
         this.empId = empId;
         this.empName = empName;
         this.address = address;
         this.salary = salary;
     }
 
-    public int getEmpId() {
+    public Integer getEmpId() {
         return empId;
     }
 
@@ -38,7 +38,7 @@ public class Employee {
         this.address = address;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 

@@ -11,7 +11,7 @@ public class EmployeeDao {
     public void saveEmployees(Employee employee)throws ClassNotFoundException, SQLException {
         Connection con = DBUtil.getConnection();
 
-        PreparedStatement ps = con.prepareStatement("insert into Employee (empId, emdName, address, salary) values (?,?,?,?)");
+        PreparedStatement ps = con.prepareStatement("insert into Employee (empId, empName, address, salary) values (?,?,?,?)");
 
         ps.setInt(1, employee.getEmpId());
         ps.setString(2, employee.getEmpName());

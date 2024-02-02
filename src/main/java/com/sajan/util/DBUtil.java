@@ -9,7 +9,7 @@ public class DBUtil {
     static Connection con;
 
     private static final String DRIVER="com.mysql.cj.jdbc.Driver";
-    private static final String URL="jdbc:mysql://localhost/takeo";
+    private static final String URL="jdbc:mysql://localhost/takeodb";
     private static final String username="sajan";
     private static final String password="enter@123";
 
