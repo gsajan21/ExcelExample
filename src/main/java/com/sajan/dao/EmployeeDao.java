@@ -1,7 +1,6 @@
 package com.sajan.dao;
 
 import com.sajan.model.Employee;
-import com.sajan.util.DBUtil;
 import com.sajan.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,7 +9,6 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -66,6 +64,7 @@ public class EmployeeDao {
             session.save(saveEmployee);
 
             transaction.commit();
+            closeSessionFactory();
 
     }
     public Employee getEmployeeById(Integer empId){
@@ -101,6 +100,7 @@ public class EmployeeDao {
             transaction.commit();
             System.out.println("Employee name updated successfully.");
         }
+        closeSessionFactory();
 
     }
     public void updateAddressById(String newAddress, Integer empId){
@@ -112,6 +112,7 @@ public class EmployeeDao {
             transaction.commit();
             System.out.println("Employee address updated successfully.");
         }
+        closeSessionFactory();
 
     }
     public void updateSalaryById(Integer newSalary, Integer empId){
@@ -123,6 +124,8 @@ public class EmployeeDao {
             transaction.commit();
             System.out.println("Employee salary updated successfully.");
         }
+
+        closeSessionFactory();
 
     }
 
