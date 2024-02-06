@@ -1,10 +1,19 @@
 package com.sajan.model;
 
+import javax.persistence.*;
+
+@Table(name="Employee")
+@Entity
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer empId;
+    @Column(name="empName")
     private String empName;
+    @Column(name="address")
     private String address;
+    @Column(name="salary")
     private Integer salary;
 
     public Employee(Integer empId, String empName, String address, Integer salary) {
@@ -12,6 +21,10 @@ public class Employee {
         this.empName = empName;
         this.address = address;
         this.salary = salary;
+    }
+
+    public Employee() {
+
     }
 
     public Integer getEmpId() {
